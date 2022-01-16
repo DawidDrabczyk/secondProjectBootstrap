@@ -17,6 +17,13 @@ body{
     color: rgba(235,179,210,255);
 }
 
+.brand-text{
+    margin-left: 20px;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    text-shadow: 0 0 10px black;
+}
+
 .shadow-bg{
     position: absolute;
     top: 0;
@@ -27,11 +34,29 @@ body{
     z-index: -1;
 }
 
+.top-hero{
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    z-index: 0;
+}
+
+.top-hero-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px black;
+}
+
 /* nav */
 
 nav img{
-    height: 8rem;
-    width: 8rem;
+    height: 7rem;
+    width: 7rem;
     color: wheat;
 }
 
@@ -130,10 +155,70 @@ header{
     font-weight: bold;
 }
 
+/* aboutus */
+
+.aboutus-brand-logo{
+    height: 30%;
+    width: 30%;
+}
+
+.aboutus-top .brand-text{
+    font-size: 1.7rem;
+}
+
+.aboutus-top-text{
+    font-size: 1.3rem;
+}
+
+.aboutus-hero{
+    background-image: url('../img/aboutus/aboutus-hero.jpg');
+    background-position: center;
+}
+
+/* ------ */
+
+.aboutus-info{
+    background-color: rgb(226, 226, 226);
+}
+.aboutus-info .container{
+    padding: 2em 0.5em;
+}
+.aboutus-text{
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+.aboutus-text h3{
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.aboutus-text-right{
+    text-align: right;
+}
+.aboutus-img{
+    height: 350px;
+    object-fit:scale-down
+}
+
+/* ------ */
+
+.aboutus-bottom{
+    text-shadow: 0 0 1px black;
+}
+.aboutus-bottom i{
+    font-size: 6rem;
+}
+.aboutus-bottom h3{
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
 /* footer */
 
 footer{
     font-size: 1.6rem;
+    border-top: 1px solid black;
 }
 
 /* media RWD */ 
@@ -142,24 +227,27 @@ footer{
 @media (min-width: 400px){
 
     nav img{
-        height: 10rem;
-        width: 10rem;
+        height: 9rem;
+        width: 9rem;
     }
     .navbar-brand{
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
     .navbar-toggler{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    .aboutus-top .brand-text{
+        font-size: 2.1rem;
     }
 }
 
 @media (min-width: 550px){
     nav img{
-        height: 13rem;
-        width: 13rem;
+        height: 12rem;
+        width: 12rem;
     }
     .navbar-brand{
-        font-size: 3.3rem;
+        font-size: 3.2rem;
     }
     .navbar-toggler{
         font-size: 2rem;
@@ -167,12 +255,15 @@ footer{
     footer{
         font-size: 2rem;
     }
+    .aboutus-top .brand-text{
+        font-size: 2.8rem;
+    }
 }
 
 @media (min-width: 700px){
     nav img{
-        height: 16rem;
-        width: 16rem;
+        height: 15rem;
+        width: 15rem;
     }
     .navbar-brand{
         font-size: 3rem;
@@ -186,10 +277,15 @@ footer{
     }
 }
 
+@media (min-width:768px){
+    .aboutus-bottom .card{
+    height: 350px;
+}
+}
+
 @media (min-width: 850px){
-    nav img{
-        height: 20rem;
-        width: 20rem;
+    .top-hero{
+        height: 300px;
     }
     .navbar-brand{
         font-size: 4rem;
@@ -197,11 +293,44 @@ footer{
     .navbar-toggler{
         font-size: 3rem;
     }
+    .aboutus-top .brand-text{
+        font-size: 3.7rem;
+    }
+    .aboutus-top-text{
+        font-size: 1.8rem;
+    }
 }
 
 @media (min-width: 992px){
+    .top-hero{
+        height: 400px;
+    }
     .nav-link{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+    }
+    .aboutus-top .brand-text{
+        font-size: 4.5rem;
+    }
+    .aboutus-info .container{
+        padding: 0;
+    }
+    .aboutus-shadow{
+        box-shadow: inset 0 5px 10px -5px black;
+    }
+    .aboutus-text{
+        transform: skew(-20deg);
+    }
+    .aboutus-text-left{
+        padding-right: 3em;
+        text-align: right;
+    }
+    .aboutus-text-right{
+        padding-left: 3em;
+        text-align: left;
+    }
+    .aboutus-img{
+        height: auto;
+        transform: skew(-20deg);
     }
 }
 
@@ -213,7 +342,7 @@ footer{
 
 @media (min-width: 1200px){
     .nav-link{
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
     .home-history h3{
         font-size: 4rem;
@@ -224,35 +353,33 @@ footer{
 }
 
 @media(min-width: 1400px){
-    
+    .top-hero{
+        height: 500px;
+    }
     nav img{
-        height: 20rem;
-        width: 20rem;
+        height: 18rem;
+        width: 18rem;
     }
     .navbar-brand{
         font-size: 5.5rem;
     }
-    .nav-link{
-        font-size: 2.2rem;
-    }
-
     .carousel-item{
         height: 900px;
     }
     .carousel-img-one{
         background-image: url('../img/carousel-first-1920.jpg');
     }
-    
     .carousel-img-two{
         background-image: url('../img/carousel-second-1920.jpg');
     }
-    
     .carousel-img-three{
         background-image: url('../img/carousel-third-1920.jpg');
     }
-
     .home-section{
         height: 600px;
         background-image: url('../img/bg-1920.jpg');
+    }
+    .aboutus-top .brand-text{
+        font-size: 5.5rem;
     }
 }
