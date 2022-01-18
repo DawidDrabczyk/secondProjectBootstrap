@@ -49,7 +49,7 @@ body {
 	font-size: 5rem;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	text-shadow: 0 0 10px black;
+	text-shadow: 0 5px 10px black;
 }
 
 /* nav */
@@ -233,6 +233,7 @@ header {
     font-size: 3rem;
     text-transform: uppercase;
     text-align: center;
+    text-shadow: 0px 5px 10px black;
     color: #fff;
 }
 .offer-hero-box.box-one{
@@ -261,16 +262,75 @@ header {
 .offer-contact:hover{
     color: rgba(235, 179, 210, 255);
 }
-
 .icon-contact{
     padding: 20px;
     font-size: 4rem;
 }
-
 .icon-contact.bi-instagram{
     background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* gallery */
+
+.gallery-hero{
+    background-image: url('../img/gallery/gallery-hero.jpg');
+    background-position-y: 22%;
+}
+
+.gallery .btn{
+	margin-right: 100px;
+	margin-bottom: 15px;
+	left: 10px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.gallery img{
+    height: 300px;
+}
+
+.gallery .card-body{
+	position: relative;
+	height: 200px;
+}
+
+.gallery .card-text{
+	position: absolute;
+	bottom: 0;
+
+}
+
+/* contact */
+
+.contact-hero{
+	background-image: url('../img/contact/hero-contact.jpg');
+	background-position: center;
+}
+
+.contact h2{
+	font-size: 2.6rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.contact-logo{
+	font-size: 3rem;
+}
+
+.contact input, .contact select, .contact textarea{
+	font-size: 2rem;
+}
+
+.contact .btn{
+	font-size: 2rem;
+	padding: 0.8em 1.8em;
+}
+
+.contact-map iframe{
+	width: 100%;
+	min-height: 400px;
 }
 
 /* footer */
